@@ -1,15 +1,14 @@
 package behabioral.strategy.ex1;
 
 public class CalculadorDeImposto {
-	
-	public void realizaCalculo(Orcamento orcamento, String imposto) {
-		
-		if(imposto.equals("ICMS")){
-			double icms = orcamento.getValor() * 0.1;
-			System.out.println(icms);
-		}else {
-			double iss = orcamento.getValor() * 0.06;
-			System.out.println(iss);
-		}
+
+	public void realizarCalculoIcms(Orcamento orcamento) {
+		double icms = new ICMS().calcularIcms(orcamento);
+		System.out.println(icms);
+	}
+
+	public void realizarCalculoIss(Orcamento orcamento) {
+		double iss = new ISS().calcularIss(orcamento);
+		System.out.println(iss);
 	}
 }
