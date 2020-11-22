@@ -1,8 +1,8 @@
 package behabioral.strategy.ex1;
 
-public class ICMS {
+public class ICMS implements Imposto{
 	
-	public double calcularIcms(Orcamento orcamento) {
+	public double calcular(Orcamento orcamento) {
 		return orcamento.getValor() * 0.1;
 	}
 

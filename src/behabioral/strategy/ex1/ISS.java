@@ -1,8 +1,8 @@
 package behabioral.strategy.ex1;
 
-public class ISS {
+public class ISS implements Imposto{
 	
-	public double calcularIss(Orcamento orcamento) {
+	public double calcular(Orcamento orcamento) {
 		return orcamento.getValor() * 0.06;
 	}
 
